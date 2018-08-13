@@ -34,10 +34,10 @@
 	<table class="table" id="tbFabricantes">
 		<thead>
 			<tr>
-				<th scope="col">Código</th>
-				<th scope="col">Fabricante</th>
-				<th scope="col">Alterar</th>
-				<th scope="col">Excluir</th>
+				<th scope="col" style="width: 10%">Código</th>
+				<th scope="col" style="width: 70%">Fabricante</th>
+				<th scope="col" style="width: 10%">Alterar</th>
+				<th scope="col" style="width: 10%">Excluir</th>
 			</tr>
 		</thead>
 		<tbody>

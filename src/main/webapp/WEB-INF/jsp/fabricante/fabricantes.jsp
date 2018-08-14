@@ -27,7 +27,8 @@
 	
 	<div class="row">
 		<div class="col-md-12">
-			<a href="${pageContext.request.contextPath}/fabricante/adicionar">Adicionar Fabricante</a>
+			<a href="${pageContext.request.contextPath}/fabricante/adicionar" class="btn btn-primary"><i class="fas fa-plus"></i>Adicionar Fabricante</a>
+			<br /><br />
 		</div>
 	</div>
 	

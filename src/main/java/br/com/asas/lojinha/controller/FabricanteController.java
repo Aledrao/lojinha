@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.asas.lojinha.entity.Fabricante;
+import br.com.asas.lojinha.exception.LojinhaNotFoundException;
 import br.com.asas.lojinha.service.FabricanteService;
 
 @Controller
@@ -58,7 +59,7 @@ public class FabricanteController {
     }
     
     @RequestMapping(value = "/atualizar/{codigo}", method = RequestMethod.GET)
-    public ModelAndView atualizar(@PathVariable("codigo") Long codigo) {
+    public ModelAndView atualizar(@PathVariable("codigo") Long codigo) throws LojinhaNotFoundException {
     	log.debug("Acessando página para atualizar fabricante.");
     	ModelAndView modelAndView = new ModelAndView("fabricante/atualizar");
     	modelAndView.addObject("fabricante", fabricanteService.encontrarUm(codigo));
@@ -80,7 +81,7 @@ public class FabricanteController {
     }
     
     @RequestMapping(value = "/excluir/{codigo}", method = RequestMethod.GET)
-    public ModelAndView excluir(@PathVariable("codigo") Long codigo) {
+    public ModelAndView excluir(@PathVariable("codigo") Long codigo) throws LojinhaNotFoundException {
     	log.debug("Acessando página para excluir fabricante.");
     	ModelAndView modelAndView = new ModelAndView("/fabricante/excluir");
     	modelAndView.addObject("fabricante", fabricanteService.encontrarUm(codigo));
